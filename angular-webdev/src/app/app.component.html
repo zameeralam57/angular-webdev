@@ -1,0 +1,101 @@
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="font-family: Arial, Helvetica, sans-serif;">MOHAMMED ZAMIR ALAM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item ">
+                    <a class="nav-link" href="#about">About Me <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#courses">MCA Courses</a>  
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a> 
+                </li>
+
+            </ul>
+            <div class="ms-auto">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#studentFormModal">Student Form</button>
+            </div>
+          </div>
+    </nav>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="studentFormModal" tabindex="-1" role="dialog" aria-labelledby="studentFormModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="studentFormModalLabel">Student Form</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form id="studentForm">
+                      <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Your Name">
+                      </div>
+                      <div class="form-group">
+                          <label for="Dob">DOB</label>
+                          <input type="number" class="form-control" id="Dob" placeholder="Your Age">
+                      </div>
+                      <div class="form-group">
+                          <label for="city">City</label>
+                          <input type="text" class="form-control" id="city" placeholder="city">
+                      </div>
+                      <div class="form-group">
+                          <label for="gender">Gender</label>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                              <label class="form-check-label" for="male">Male</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                              <label class="form-check-label" for="female">Female</label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="hobbies">Hobbies</label>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="reading" value="Reading">
+                              <label class="form-check-label" for="reading">Sports</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="swimming" value="Swimming">
+                              <label class="form-check-label" for="swimming">Entertainment</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="cycling" value="Cycling">
+                              <label class="form-check-label" for="cycling">reading</label>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="getFormValues()">Submit</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--TWO-WAY DATA BINDING-->
+  <div>
+    <h2>Two-way Data Binding Example</h2>
+    
+    <!-- Two-way data binding with input -->
+    <span class="input-group-text" id="addon-wrapping"> </span>
+    <input type="text" class="form-control" placeholder="name" [(ngModel)]="Name" placeholder="Enter your name" aria-label="Username" aria-describedby="addon-wrapping">
+    
+    <!-- Display the updated value --> 
+    <p style="font-weight: bold;">Good Morning, {{ Name }}!</p>
+  </div>
+
+
+<router-outlet>
