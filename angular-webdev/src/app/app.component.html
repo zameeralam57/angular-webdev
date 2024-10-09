@@ -6,24 +6,36 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item ">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="#about">About Me <span class="sr-only">(current)</span></a>
                 </li>
+                <!-- Dropdown for Courses -->
+                <!--li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="Course" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" role="button">MCA</a>
+                        <a class="dropdown-item" role="button">BCA</a>
+                        <a class="dropdown-item" role="button">BBA</a>
+                        <a class="dropdown-item" role="button">MBA</a>
+                    </div>
+                </li-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#courses">MCA Courses</a>  
+                    <a class="nav-link" role="button" routerLink="/app-course">Courses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a> 
+                    <a class="nav-link" role="button" routerLink="/app-contacts" >Contact</a>
                 </li>
 
             </ul>
             <div class="ms-auto">
                 <button class="btn btn-primary" data-toggle="modal" data-target="#studentFormModal">Student Form</button>
             </div>
-          </div>
+        </div>
     </nav>
-
+    
 
     <!-- Modal -->
     <div class="modal fade" id="studentFormModal" tabindex="-1" role="dialog" aria-labelledby="studentFormModalLabel" aria-hidden="true">
@@ -87,15 +99,15 @@
 
   <!--TWO-WAY DATA BINDING-->
   <div>
-    <h2>Two-way Data Binding Example</h2>
+    <h2>Two-way Data Binding Example</h2> 
     
-    <!-- Two-way data binding with input -->
+    <!--Two-way data binding with input-->
     <span class="input-group-text" id="addon-wrapping"> </span>
     <input type="text" class="form-control" placeholder="name" [(ngModel)]="Name" placeholder="Enter your name" aria-label="Username" aria-describedby="addon-wrapping">
     
-    <!-- Display the updated value --> 
+    <!-- Display the updated value -->  
     <p style="font-weight: bold;">Hello, {{ Name }}!</p>
   </div>
 
 
-<router-outlet>
+<router-outlet></router-outlet>
